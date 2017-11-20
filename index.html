@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    正在热聊中:
+    <div>
+        <ul>
+            {{each msgs}}
+            <li>{{$value.nickname}}说:{{$value.msg}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <form method="post" action="/sendMsg">
+        <input type="text" name="nickname">
+        说:<input type="text" name="msg">
+        <input type="submit" name="" value="发送">
+    </form>
+
+</body>
+</html>
